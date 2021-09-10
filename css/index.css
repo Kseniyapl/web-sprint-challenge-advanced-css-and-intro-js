@@ -135,12 +135,18 @@ button:hover{
     width:100%;
 }
 @media(max-width:500px){
+    nav a{
+        padding: 0 10%;
+    }
     .title-container div {	
         width: 100%;
         
     }
     h1{
         font-size:5rem;
+    }
+    .title-container hr{
+        width:100%;
     }
     .artists-container{
     

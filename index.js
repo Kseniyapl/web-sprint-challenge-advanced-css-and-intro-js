@@ -321,7 +321,7 @@ function lotsOfArt(arr) {
      newArr.push(arr[i].name);
       }
   }
-  return newArr
+  return newArr;
 }
 console.log('task 7: ', lotsOfArt(artists))
 
