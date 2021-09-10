@@ -249,13 +249,13 @@ function get20s(arr) {
   let newArr = []
 for(let i = 0; i<arr.length; i++){
   let  x = arr[i].years.split(" - ")
-    if (x[0] >=1900 &&x[1] <=2000){
+    if (x[0] >=1900 && x[1] <=2000){
       newArr.push(arr[i].name)
     }
   }
 return newArr;
 }
-console.log('bla', get20s(artists))
+console.log('Task 4:', get20s(artists))
 
 
 
@@ -268,10 +268,14 @@ Use removeArtist to do the following:
 
 For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(arr, num) {
+  arr.splice(num, 1)
+  return Number('19')
+
 }
 
+console.log("Task 5: ", removeArtist(artists, 0))
+// console.log(artists)
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -289,11 +293,19 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(arr) {
+  arr.push({ 
+    id: 20,
+    name: 'Kseniya Platonava', 
+    years: '1988 - current day',
+    genre: 'Web Design', 
+    nationality: 'Russian',
+    bio: "I know 5 languages! "
+  }  )
+  return arr
 }
 
-
+console.log(addArtist(artists))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
@@ -302,10 +314,16 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(arr) {
+  let newArr = [];
+    for (let i=0; i<arr.length; i++){
+      if (arr[i].paintings>100){
+     newArr.push(arr[i].name);
+      }
+  }
+  return newArr
 }
-
+console.log('task 7: ', lotsOfArt(artists))
 
 /* ***** END OF TASKS ***** */
 
